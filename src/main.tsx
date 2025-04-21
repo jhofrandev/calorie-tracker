@@ -1,11 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import App from "./App.tsx";
+
+import { ActivityProvider } from "./context/ActivityContext.tsx";
+
+import "./index.css";
 
 // Add
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <ActivityProvider>
+      <App />
+    </ActivityProvider>
   </StrictMode>
 );
